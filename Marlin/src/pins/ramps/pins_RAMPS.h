@@ -65,7 +65,7 @@
   #ifdef IS_RAMPS_13
     #define SERVO0_PIN                         7
   #else
-    #define SERVO0_PIN                        11
+    #define SERVO0_PIN                        -1 //11 //Used as z-min pin
   #endif
 #endif
 #ifndef SERVO1_PIN
@@ -99,7 +99,7 @@
 #endif
 #ifndef Z_STOP_PIN
   #ifndef Z_MIN_PIN
-    #define Z_MIN_PIN                         18
+    #define Z_MIN_PIN                         11 //18 //Use SERVO0_PIN as z-min (artillery genius ABL port)
   #endif
   #ifndef Z_MAX_PIN
     #define Z_MAX_PIN                         19
